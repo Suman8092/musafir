@@ -150,7 +150,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
+        className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight font-grotesk"
       >
         Capture Your Delhi Journey Like a
         <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
@@ -165,7 +165,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
         viewport={{ once: true }}
-        className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-8 leading-relaxed opacity-90"
+        className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-8 leading-relaxed opacity-90 font-poppins"
       >
         Book verified photographers & videographers to shoot your travel moments
         at iconic locations across Delhi & Agra.
@@ -181,14 +181,15 @@ export default function Home() {
       >
         <button
           onClick={handleBookingClick}
-          className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-orange-500/25 whitespace-nowrap cursor-pointer overflow-hidden group"
+          className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-orange-500/25 whitespace-nowrap cursor-pointer overflow-hidden group font-poppins"
         >
           <span className="relative z-10">Book Your Shoot Now</span>
           <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
         </button>
+
         <button
           onClick={handlePartnershipClick}
-          className="relative border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl whitespace-nowrap cursor-pointer overflow-hidden group"
+          className="relative border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl whitespace-nowrap cursor-pointer overflow-hidden group font-poppins"
         >
           <span className="relative z-10">Partner With Us</span>
           <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -197,6 +198,7 @@ export default function Home() {
     </div>
   </div>
 </section>
+
 
 
       {/* What We Offer Section with 3D cards */}
