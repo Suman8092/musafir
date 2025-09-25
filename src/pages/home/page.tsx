@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
-
+import CountUp from "react-countup";
 import BookingModal from '../../components/BookingModal';
 import PartnershipModal from '../../components/PartnershipModal';
 import PhotoGalleryModal from '../../components/PhotoGalleryModal';
 import ContactModal from '../../components/ContactModal';
 import LocationGuideModal from '../../components/LocationGuideModal';
-
-
 
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -66,80 +64,80 @@ export default function Home() {
             </div>
 
             {/* Desktop Navigation with 3D hover effects */}
-            <div className="hidden lg:flex items-center space-x-8">
-              
-              <button onClick={() => scrollToSection('services')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
-                Services
-              </button>
-              <button onClick={() => scrollToSection('packages')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
-                Packages
-              </button>
-              <button onClick={() => scrollToSection('portfolio')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
-                Portfolio
-              </button>
-              <button onClick={() => scrollToSection('about')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
-                About
-              </button>
-              <button onClick={() => setIsLocationGuideOpen(true)} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
-                Locations
-              </button>
-              {/* 3D CTA Button */}
-              <button onClick={handleBookingClick} className="relative px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-orange-500/25 whitespace-nowrap cursor-pointer">
-                <span className="relative z-10">Book Now</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+         <div className="hidden lg:flex items-center space-x-8">
 
-              {/* Contact Button with 3D effect */}
-              <button onClick={() => setIsContactModalOpen(true)} className={`relative px-4 py-2 rounded-lg font-medium border-2 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white' : 'border-white text-white hover:bg-white hover:text-gray-900'} hover:shadow-lg whitespace-nowrap`}>
-                <i className="ri-phone-line mr-2"></i>
-                Contact
-              </button>
-            </div>
+<button onClick={() => scrollToSection('services')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
+Services
+</button>
+<button onClick={() => scrollToSection('packages')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
+Packages
+</button>
+<button onClick={() => scrollToSection('portfolio')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
+Portfolio
+</button>
+<button onClick={() => scrollToSection('about')} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
+About
+</button>
+<button onClick={() => setIsLocationGuideOpen(true)} className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'text-gray-700 hover:text-orange-500 hover:bg-orange-50' : 'text-white hover:text-orange-300 hover:bg-white/10'} hover:shadow-lg`}>
+Locations
+</button>
+{/* 3D CTA Button */}
+<button onClick={handleBookingClick} className="relative px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-orange-500/25 whitespace-nowrap cursor-pointer">
+<span className="relative z-10">Book Now</span>
+<div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+</button>
 
-            {/* Mobile menu button */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden w-10 h-10 rounded-lg flex items-center justify-center transition-colors cursor-pointer ${scrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
-              <i className={`text-2xl ${isMenuOpen ? 'ri-close-line' : 'ri-menu-line'}`}></i>
-            </button>
-          </div>
+{/* Contact Button with 3D effect */}
+<button onClick={() => setIsContactModalOpen(true)} className={`relative px-4 py-2 rounded-lg font-medium border-2 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 cursor-pointer ${scrolled ? 'border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white' : 'border-white text-white hover:bg-white hover:text-gray-900'} hover:shadow-lg whitespace-nowrap`}>
+<i className="ri-phone-line mr-2"></i>
+Contact
+</button>
+</div>
 
-          {/* Mobile Navigation with 3D effects */}
-          <div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-[500px] pb-6' : 'max-h-0'}`}>
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl mt-4 p-6 shadow-xl">
-              <div className="space-y-4">
-                <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                  Services
-                </button>
-                <button onClick={() => scrollToSection('packages')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                  Packages
-                </button>
-                <button onClick={() => scrollToSection('portfolio')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                  Portfolio
-                </button>
-                <button onClick={() => scrollToSection('about')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                  About
-                </button>
-                <button onClick={() => setIsLocationGuideOpen(true)} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                  Locations
-                </button>
-                <div className="pt-4 space-y-3">
-                  <button onClick={handleBookingClick} className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer whitespace-nowrap">
-                    Book Now
-                  </button>
-                  <button onClick={() => setIsContactModalOpen(true)} className="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
-                    <i className="ri-phone-line mr-2"></i>
-                    Contact Us
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+{/* Mobile menu button */}
+<button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden w-10 h-10 rounded-lg flex items-center justify-center transition-colors cursor-pointer ${scrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
+<i className={`text-2xl ${isMenuOpen ? 'ri-close-line' : 'ri-menu-line'}`}></i>
+</button>
+</div>
+
+{/* Mobile Navigation with 3D effects */}
+<div className={`lg:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-[500px] pb-6' : 'max-h-0'}`}>
+<div className="bg-white/95 backdrop-blur-md rounded-2xl mt-4 p-6 shadow-xl">
+<div className="space-y-4">
+<button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
+Services
+</button>
+<button onClick={() => scrollToSection('packages')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
+Packages
+</button>
+<button onClick={() => scrollToSection('portfolio')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
+Portfolio
+</button>
+<button onClick={() => scrollToSection('about')} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
+About
+</button>
+<button onClick={() => setIsLocationGuideOpen(true)} className="block w-full text-left px-4 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 cursor-pointer">
+Locations
+</button>
+<div className="pt-4 space-y-3">
+<button onClick={handleBookingClick} className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer whitespace-nowrap">
+Book Now
+</button>
+<button onClick={() => setIsContactModalOpen(true)} className="w-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
+<i className="ri-phone-line mr-2"></i>
+Contact Us
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
 {/* Hero Section Main */}
     <section
   className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
   style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('./assest/images/hhhh.png')`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('./assest/images/shoot6.jpg')`,
   }}
 >
   <div className="container mx-auto px-4 sm:px-6 text-white relative z-10 text-center sm:text-left">
@@ -150,7 +148,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight font-grotesk"
+        className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight font-grotesk"
       >
         Capture Your Delhi Journey Like a
         <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
@@ -448,7 +446,7 @@ export default function Home() {
       </section>
 
       {/* Social Proof Section with 3D gallery */}
-      <section id="portfolio" className="py-20 bg-white relative overflow-hidden">
+     <section id="portfolio" className="py-20 bg-white relative overflow-hidden">
         {/* 3D Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-orange-100 to-red-100 rounded-full blur-xl opacity-50"></div>
@@ -464,15 +462,15 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[ 
               {
-                src: "https://readdy.ai/api/search-image?query=Professional%20travel%20photography%20session%20at%20India%20Gate%20Delhi%20with%20happy%20tourists%20posing%2C%20golden%20hour%20lighting%2C%20cinematic%20composition%2C%20photographer%20in%20background%2C%20authentic%20travel%20moments%2C%20joyful%20expressions%2C%20iconic%20landmark&width=400&height=500&seq=social-proof-1&orientation=portrait",
+                src: "./assest/images/lotust.jpg",
                 alt: "Client shoot at India Gate"
               },
               {
-                src: "https://readdy.ai/api/search-image?query=Couple%20photography%20session%20at%20Humayuns%20Tomb%20Delhi%2C%20romantic%20poses%2C%20professional%20photographer%20capturing%20moment%2C%20beautiful%20architecture%20background%2C%20warm%20sunset%20lighting%2C%20love%20story%20photoshoot%2C%20heritage%20monument%20setting&width=400&height=500&seq=social-proof-2&orientation=portrait",
+                src: "./assest/images/lotust2.jpg",
                 alt: "Couple shoot at Humayun's Tomb"
               },
               {
-                src: "https://readdy.ai/api/search-image?query=Instagram%20influencer%20content%20creation%20shoot%20at%20Lodhi%20Garden%20Delhi%2C%20trendy%20poses%2C%20smartphone%20and%20camera%20setup%2C%20content%20creator%20with%20photographer%2C%20vibrant%20colors%2C%20social%20media%20style%20photography%2C%20garden%20background&width=400&height=500&seq=social-proof-3&orientation=portrait",
+                src: "./assest/images/shoot4.jpg",
                 alt: "Influencer shoot at Lodhi Garden"
               }
             ].map((image, index) => (
@@ -495,23 +493,37 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              {[ 
-                { number: "500+", label: "Happy Travelers" },
-                { number: "50+", label: "Verified Photographers" },
-                { number: "25+", label: "Iconic Locations" }
-              ].map((stat, index) => (
-                <div key={index} className="group">
-                  <div className="text-4xl font-bold text-orange-600 mb-2 transform group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          
+
+  <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500 relative overflow-hidden">
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
+  <div className="grid md:grid-cols-3 gap-8 text-center">
+    {[
+      { number: 500, suffix: "+", label: "Happy Travelers" },
+      { number: 50, suffix: "+", label: "Verified Photographers" },
+      { number: 25, suffix: "+", label: "Iconic Locations" }
+    ].map((stat, index) => (
+      <div key={index} className="group">
+        <div className="text-4xl font-bold text-orange-600 mb-2 transform group-hover:scale-110 transition-transform duration-300">
+          <CountUp 
+            end={stat.number} 
+            duration={3} 
+            enableScrollSpy={true}   // 👈 scroll par start hoga
+            scrollSpyOnce={true}     // 👈 ek hi baar chalega
+          />
+          {stat.suffix}
+        </div>
+        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+          {stat.label}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
         </div>
       </section>
+
+
 
       {/* About Section with 3D elements */}
       <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-orange-50 relative overflow-hidden">
@@ -610,25 +622,31 @@ export default function Home() {
 
             {/* Team Stats with 3D counters */}
             <div className="grid md:grid-cols-4 gap-8 mb-16">
-              {[ 
-                { number: "2+", label: "Years Experience", icon: "ri-calendar-line" },
-                { number: "500+", label: "Happy Clients", icon: "ri-user-smile-line" },
-                { number: "50+", label: "Pro Photographers", icon: "ri-camera-line" },
-                { number: "25+", label: "Delhi Locations", icon: "ri-map-pin-line" }
-              ].map((stat, index) => (
-                <div key={index} className="text-center group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                      <i className={`${stat.icon} text-xl text-white`}></i>
-                    </div>
-                    <div className="text-3xl font-bold text-orange-600 mb-1 transform group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
-                    <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{stat.label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
+  {[
+    { number: 2, suffix: "+", label: "Years Experience", icon: "ri-calendar-line" },
+    { number: 500, suffix: "+", label: "Happy Clients", icon: "ri-user-smile-line" },
+    { number: 50, suffix: "+", label: "Pro Photographers", icon: "ri-camera-line" },
+    { number: 25, suffix: "+", label: "Delhi Locations", icon: "ri-map-pin-line" }
+  ].map((stat, index) => (
+    <div
+      key={index}
+      className="text-center group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 relative overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative z-10">
+        <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
+          <i className={`${stat.icon} text-xl text-white`}></i>
+        </div>
+        <div className="text-3xl font-bold text-orange-600 mb-1 transform group-hover:scale-110 transition-transform duration-300">
+          <CountUp end={stat.number} duration={3} />{stat.suffix}
+        </div>
+        <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+          {stat.label}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
             {/* Call to Action with 3D button */}
             <div className="text-center bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-12 text-white relative overflow-hidden">
               {/* 3D background pattern */}
@@ -647,7 +665,7 @@ export default function Home() {
                     <span className="relative z-10">Book Your Shoot</span>
                     <div className="absolute inset-0 bg-gray-100 transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                   </button>
-                  <button onClick={() => window.open('https://wa.me/91XXXXXXXXXX?text=Hi! I want to know more about your photography services', '_blank')} className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl whitespace-nowrap cursor-pointer">
+                  <button onClick={() => window.open('https://wa.me/919599081863?text=Hi! I want to know more about your photography services', '_blank')} className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl whitespace-nowrap cursor-pointer">
                     <span className="relative z-10 flex items-center justify-center">
                       <i className="ri-whatsapp-line mr-2"></i>
                       Chat With Us
@@ -728,7 +746,7 @@ export default function Home() {
                 <button onClick={() => setIsContactModalOpen(true)} className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-orange-500/25 whitespace-nowrap cursor-pointer">
                   Contact Support
                 </button>
-                <button onClick={() => window.open('https://wa.me/918092460529?text=Hi! I have some questions about your photography services', '_blank')} className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap cursor-pointer">
+                <button onClick={() => window.open('https://wa.me/919599081863?text=Hi! I have some questions about your photography services', '_blank')} className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap cursor-pointer">
                   <i className="ri-whatsapp-line mr-2"></i>
                   WhatsApp Chat
                 </button>
@@ -754,24 +772,24 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[ 
               {
-                name: "Emma Johnson",
-                country: "Australia",
+                name: "Mannat Thakur",
+                country: "Delhi, India",
                 rating: 5,
                 date: "2 days ago",
                 review: "Absolutely incredible experience! The photographer knew all the perfect spots and angles. Our photos look like they're from a professional magazine. Highly recommend!",
                 avatar: "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20woman%20smiling%2C%20blonde%20hair%2C%20casual%20outfit%2C%20warm%20lighting%2C%20friendly%20expression%2C%20travel%20blogger%20style&width=100&height=100&seq=review-1&orientation=squarish"
               },
               {
-                name: "Marco Silva",
-                country: "Brazil",
+                name: "Pehal Rajpoot",
+                country: "Jammu, India",
                 rating: 5,
                 date: "5 days ago", 
                 review: "Perfect service from start to finish! Communication was excellent, and the photos exceeded our expectations. The Instagram reel they created got over 50k views!",
                 avatar: "https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20man%20smiling%2C%20dark%20hair%2C%20casual%20shirt%2C%20warm%20lighting%2C%20confident%20expression%2C%20travel%20enthusiast%20style&width=100&height=100&seq=review-2&orientation=squarish"
               },
               {
-                name: "Yuki Tanaka",
-                country: "Japan",
+                name: "Surbhi Pathaniya",
+                country: "Punjab, india",
                 rating: 5,
                 date: "1 week ago",
                 review: "Amazing photographer and wonderful experience! They helped us feel comfortable and captured our personalities perfectly. The editing quality is top-notch. Thank you!",
@@ -914,83 +932,124 @@ export default function Home() {
       </section>
 */}
       {/* Footer with 3D elements */}
-      <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-20 w-24 h-24 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-2xl"></div>
+      <footer className="bg-gray-900 text-white py-12 relative overflow-hidden">
+  {/* Background Blurs */}
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-full blur-xl"></div>
+    <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-2xl"></div>
+  </div>
+
+  <div className="container mx-auto px-6 relative z-10">
+    {/* Footer Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      {/* Brand Section */}
+      <div className="group text-center sm:text-left">
+        <h3
+          className="text-2xl font-bold mb-4 transform group-hover:scale-105 transition-transform duration-300"
+          style={{ fontFamily: "Pacifico, serif" }}
+        >
+          Musaffirhoon
+        </h3>
+        <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">
+          Capturing your Delhi journey like a movie
+        </p>
+        <div className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 space-y-2">
+          <p className="flex items-center justify-center sm:justify-start">
+            <i className="ri-map-pin-line mr-2 text-orange-500"></i>
+            Delhi, India
+          </p>
+          <p className="flex items-center justify-center sm:justify-start">
+            <i className="ri-mail-line mr-2 text-orange-500"></i>
+            contact@musaffirhoon.com
+          </p>
+          <p className="flex items-center justify-center sm:justify-start">
+            <i className="ri-phone-line mr-2 text-orange-500"></i>
+            +91-9599081863
+          </p>
         </div>
+      </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div className="group">
-              <h3 className="text-2xl font-bold mb-4 transform group-hover:scale-105 transition-transform duration-300" style={{ fontFamily: "Pacifico, serif" }}>
-                Musaffirhoon
-              </h3>
-              <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">Capturing your Delhi journey like a movie</p>
-              <div className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                <p className="mb-2 flex items-center">
-                  <i className="ri-map-pin-line mr-2 text-orange-500"></i>
-                  Delhi, India
-                </p>
-                <p className="mb-2 flex items-center">
-                  <i className="ri-mail-line mr-2 text-orange-500"></i>
-                  contact@musaffirhoon.com
-                </p>
-                <p className="flex items-center">
-                  <i className="ri-phone-line mr-2 text-orange-500"></i>
-                  +91-XXXXXXXXXX
-                </p>
-              </div>
-            </div>
+      {/* Travelers Section */}
+      <div className="group text-center sm:text-left">
+        <h4 className="text-lg font-semibold mb-4 transform group-hover:scale-105 transition-transform duration-300">
+          For Travelers
+        </h4>
+        <ul className="space-y-2 text-gray-400">
+          {["Book a Shoot", "Our Packages", "Popular Locations", "How it Works"].map((item, idx) => (
+            <li key={idx}>
+              <a
+                href="#"
+                className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            <div className="group">
-              <h4 className="text-lg font-semibold mb-4 transform group-hover:scale-105 transition-transform duration-300">For Travelers</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Book a Shoot</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Our Packages</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Popular Locations</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">How it Works</a></li>
-              </ul>
-            </div>
+      {/* Partnerships Section */}
+      <div className="group text-center sm:text-left">
+        <h4 className="text-lg font-semibold mb-4 transform group-hover:scale-105 transition-transform duration-300">
+          Partnerships
+        </h4>
+        <ul className="space-y-2 text-gray-400">
+          {["Join as Creator", "Partner With Us", "Travel Agency Program", "Affiliate Program"].map((item, idx) => (
+            <li key={idx}>
+              <a
+                href="#"
+                className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            <div className="group">
-              <h4 className="text-lg font-semibold mb-4 transform group-hover:scale-105 transition-transform duration-300">Partnerships</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Join as Creator</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Partner With Us</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Travel Agency Program</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Affiliate Program</a></li>
-              </ul>
-            </div>
-
-            <div className="group">
-              <h4 className="text-lg font-semibold mb-4 transform group-hover:scale-105 transition-transform duration-300">Connect</h4>
-              <div className="flex space-x-4 mb-4">
-                <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-orange-500/25 cursor-pointer">
-                  <i className="ri-instagram-line text-xl"></i>
-                </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-green-500/25 cursor-pointer">
-                  <i className="ri-whatsapp-line text-xl"></i>
-                </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-red-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-red-500/25 cursor-pointer">
-                  <i className="ri-youtube-line text-xl"></i>
-                </a>
-              </div>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Terms & Conditions</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p className="transform hover:scale-105 transition-transform duration-300 inline-block">
-              2024 Musaffirhoon. All rights reserved. Made with for travelers in Delhi
-            </p>
-          </div>
+      {/* Social + Policies */}
+      <div className="group text-center sm:text-left">
+        <h4 className="text-lg font-semibold mb-4 transform group-hover:scale-105 transition-transform duration-300">
+          Connect
+        </h4>
+        <div className="flex justify-center sm:justify-start space-x-4 mb-4">
+          <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-orange-500/25">
+            <i className="ri-instagram-line text-lg"></i>
+          </a>
+          <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-green-500/25">
+            <i className="ri-whatsapp-line text-lg"></i>
+          </a>
+          <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-red-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-red-500/25">
+            <i className="ri-youtube-line text-lg"></i>
+          </a>
+          <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-blue-500/25">
+            <i className="ri-facebook-line text-lg"></i>
+          </a>
         </div>
-      </footer>
+        <ul className="space-y-2 text-gray-400 text-sm">
+          {["Terms & Conditions", "Privacy Policy", "Contact Us"].map((item, idx) => (
+            <li key={idx}>
+              <a
+                href="#"
+                className="hover:text-orange-400 transition-colors cursor-pointer transform hover:translate-x-1 inline-block"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* Bottom Bar */}
+    <div className="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+      <p className="transform hover:scale-105 transition-transform duration-300 inline-block">
+        © 2024 Musaffirhoon. All rights reserved. Made with ❤️ for travelers in Delhi
+      </p>
+    </div>
+  </div>
+</footer>
+
 
       {/* Booking Modal */}
       <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
@@ -1010,7 +1069,7 @@ export default function Home() {
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <button 
-          onClick={() => window.open('https://wa.me/918092460529?text=Hi! I want to book a photography session in Delhi', '_blank')}
+          onClick={() => window.open('https://wa.me/919599081863?text=Hi! I want to book a photography session in Delhi', '_blank')}
           className="w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:shadow-2xl transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 animate-bounce cursor-pointer"
         >
           <i className="ri-whatsapp-line"></i>

@@ -247,7 +247,7 @@ Submitting...
 
 <button
 type="button"
-onClick={() => window.open('https://wa.me/918092460529?text=Hi! I want to discuss partnership opportunities with Musaffirhoon', '_blank')}
+onClick={() => window.open('https://wa.me/919599081863?text=Hi! I want to discuss partnership opportunities with Musaffirhoon', '_blank')}
 className="flex-1 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white py-4 rounded-xl text-lg font-semibold transition-colors whitespace-nowrap cursor-pointer"
 >
 Chat on WhatsApp
